@@ -1,0 +1,6 @@
+services:
+  - name: telegram-bot
+    type: worker  # This tells Render it's a background worker
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python Telegrambot.py"
